@@ -46,6 +46,7 @@ setTimeout(function () {
 
     const numeriIndovinati = verificaNumeriIndovinati(numeriGenerati,numeriInseriti);
     stampaNumeriIndovinati(numeriIndovinati);
+    console.log(numeriIndovinati)
 
 }, (ritardo + 1) * 1000);
 
@@ -86,12 +87,16 @@ function getNumeriUtente () {
 function verificaNumeriIndovinati(arrayGenerati,arrayInseriti) {
     const indovinati = [];
 
-    //let i=0;
+    console.log('arrayGenerati' + arrayGenerati,'arrayInseriti' + arrayInseriti);
 
-    for (let i = 0; i < arrayInseriti.length; i++); {
+    //let i;
+
+    for (let i = 0; i < arrayInseriti.length; i++) {
         if (arrayGenerati.includes(arrayInseriti[i])) {
             indovinati.push(arrayInseriti[i]);
+            console.log('indovinati ' + indovinati)
         }
+      console.log(i)
     }
     return indovinati;
 };
