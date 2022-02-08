@@ -81,18 +81,20 @@ function getNumeriUtente () {
 
 //verifica numeri indovinati
 
-function verificaNumeriIndovinati(numeriGenerati, numeriInseriti) {
+//! qua mi da errore -- che i non è definita
+
+function verificaNumeriIndovinati(arrayGenerati,arrayInseriti) {
     const indovinati = [];
 
     //let i=0;
 
-    for (let i = 0; i < numeriInseriti.length; i++); {
-        if (numeriGenerati.includes(numeriInseriti[i])) {
-            indovinati.push(numeriInseriti[i]);
+    for (let i = 0; i < arrayInseriti.length; i++); {
+        if (arrayGenerati.includes(arrayInseriti[i])) {
+            indovinati.push(arrayInseriti[i]);
         }
     }
-    return indovinati
-}
+    return indovinati;
+};
 
 //stampare risultati in video
 
