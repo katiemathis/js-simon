@@ -29,12 +29,14 @@ while (numeriGenerati.length < 5) {
 console.log(numeriGenerati)
 
 const messaggio = document.getElementById('messaggio');
+const numeri = document.getElementById('numeri')
 
-messaggio.innerHTML = numeriGenerati;
+numeri.innerHTML = numeriGenerati;
+messaggio.innerHTML = 'Osserva i seguenti numeri per 30 secondi.'
 
 //dopo 30 secondi sparisce l'array dall'HTML
 
-const ritardo = 3;
+const ritardo = 30;
 setTimeout(resetMessaggio, ritardo*1000);
 
 //dopo 1 secondo, crea 5 prompt per chiedere all'utente 5 numeri diverse tra loro che hanno ricordato dall'array
@@ -60,6 +62,7 @@ setTimeout(function () {
 
 //reset messaggio
 function resetMessaggio () {
+    numeri.innerHTML = '';
     messaggio.innerHTML = '';
 }
 
@@ -82,14 +85,11 @@ function getNumeriUtente () {
 
 //verifica numeri indovinati
 
-//! qua mi da errore -- che i non è definita
 
 function verificaNumeriIndovinati(arrayGenerati,arrayInseriti) {
     const indovinati = [];
 
     console.log('arrayGenerati' + arrayGenerati,'arrayInseriti' + arrayInseriti);
-
-    //let i;
 
     for (let i = 0; i < arrayInseriti.length; i++) {
         if (arrayGenerati.includes(arrayInseriti[i])) {
@@ -107,7 +107,8 @@ function stampaNumeriIndovinati (arrayNumInd) {
     const qtaNumInd = arrayNumInd.length;
     
     let text = qtaNumInd == 1?'numero':'numeri'
-    messaggio.innerHTML = 'Hai indovinato ' + qtaNumInd + '  ' + text + ':  [' + arrayNumInd + ']';
+    messaggio.innerHTML = 'Hai indovinato ' + qtaNumInd + '  ' + text + '.'; 
+    numeri.innerHTML = arrayNumInd 
 }
 
 

@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c71ddb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#messaggio {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 10px;
+}
+
+
+#numeri {
+    background-color: #1900c7;
+    color: #fff;
+    font-size: 40px;
+    border-width: 25px;
+    border-style: solid;
+    border-color: lightgrey;
+    height: 200px;
+    width: 320px;
+    align-self: center;
+    text-align: center;
+    line-height: 150px;
+    margin: auto;
+
+}
